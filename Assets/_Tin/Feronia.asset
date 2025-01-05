@@ -413,7 +413,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8574412962073106934, guid: ffb94bff813c3c041b5c22cc023fb25e, type: 2}
+      uniObj: {fileID: 8574412962073106934, guid: ffb94bff813c3c041b5c22cc023fb25e,
+        type: 2}
     - refId: 13
       type: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -483,7 +484,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8574412962073106934, guid: c92d180648e3c4149b7f024457016b52, type: 2}
+      uniObj: {fileID: 8574412962073106934, guid: c92d180648e3c4149b7f024457016b52,
+        type: 2}
     - refId: 17
       type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       altType: 
@@ -533,7 +535,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8574412962073106934, guid: dbd5cac43e2888e42b956cba46f3d44f, type: 2}
+      uniObj: {fileID: 8574412962073106934, guid: dbd5cac43e2888e42b956cba46f3d44f,
+        type: 2}
     - refId: 20
       type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       altType: 
@@ -583,7 +586,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8574412962073106934, guid: cf3df7d7519ee014ebecbfe99c6cab3a, type: 2}
+      uniObj: {fileID: 8574412962073106934, guid: cf3df7d7519ee014ebecbfe99c6cab3a,
+        type: 2}
     - refId: 23
       type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       altType: 
@@ -633,7 +637,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8574412962073106934, guid: effda69296984e84a9c68d42b70abaaa, type: 2}
+      uniObj: {fileID: 8574412962073106934, guid: effda69296984e84a9c68d42b70abaaa,
+        type: 2}
     - refId: 26
       type: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
       altType: 
@@ -983,7 +988,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4, type: 3}
+      uniObj: {fileID: 4012337630082778474, guid: cce4d8667f2436a479759f07084d8ff4,
+        type: 3}
     - refId: 41
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -991,7 +997,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a, type: 3}
+      uniObj: {fileID: 6060788920606015911, guid: e730e362773695e408e48f59e6dff87a,
+        type: 3}
     - refId: 42
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -999,7 +1006,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c, type: 3}
+      uniObj: {fileID: 2503636403554334455, guid: 451d860cead90b64bbbab1639909594c,
+        type: 3}
     - refId: 43
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -1007,7 +1015,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0, type: 3}
+      uniObj: {fileID: 1127992084609228112, guid: 34776a9356ed54141bf7fed4fded28a0,
+        type: 3}
     - refId: 44
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -1015,7 +1024,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 1722164173232303198, guid: 942660f4ebcf9cd438f45122b0ad63eb, type: 3}
+      uniObj: {fileID: 1722164173232303198, guid: 942660f4ebcf9cd438f45122b0ad63eb,
+        type: 3}
     - refId: 45
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -1023,7 +1033,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e, type: 3}
+      uniObj: {fileID: 8316334779356437779, guid: 35e087cfaa0f57244b67615777188d3e,
+        type: 3}
     - refId: 46
       type: MapMagic.Nodes.PositioningSettings, MapMagic, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -6018,7 +6029,7 @@ MonoBehaviour:
       - t: 11
         v: -8262039333876269043
       - t: 11
-        v: 61
+        v: 62
       - t: 255
         v: 217
       - t: 255
@@ -7399,7 +7410,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 1338854965163658714, guid: dd1cb49c7d40bfb44a9b4201f7f74b6c, type: 3}
+      uniObj: {fileID: 1338854965163658714, guid: dd1cb49c7d40bfb44a9b4201f7f74b6c,
+        type: 3}
     - refId: 269
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -7407,7 +7419,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 6179546325909802286, guid: d300c554f4589a640a733a84d30422d4, type: 3}
+      uniObj: {fileID: 6179546325909802286, guid: d300c554f4589a640a733a84d30422d4,
+        type: 3}
     - refId: 270
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -7415,7 +7428,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 185186776739890662, guid: e71b98edf7da4b448bc6ae07b82d6935, type: 3}
+      uniObj: {fileID: 185186776739890662, guid: e71b98edf7da4b448bc6ae07b82d6935,
+        type: 3}
     - refId: 271
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -7423,7 +7437,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 5032137256400794150, guid: 0d60a9157fc09ee4f9c059a176c8d1da, type: 3}
+      uniObj: {fileID: 5032137256400794150, guid: 0d60a9157fc09ee4f9c059a176c8d1da,
+        type: 3}
     - refId: 272
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -7431,7 +7446,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 1030678204986712962, guid: 398b156fac7c6f44db09e9ad046c24dd, type: 3}
+      uniObj: {fileID: 1030678204986712962, guid: 398b156fac7c6f44db09e9ad046c24dd,
+        type: 3}
     - refId: 273
       type: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -7439,7 +7455,8 @@ MonoBehaviour:
       fields: []
       values: []
       special: 
-      uniObj: {fileID: 7601787364241631101, guid: 6b63070b5a692dc4389c591157da475d, type: 3}
+      uniObj: {fileID: 7601787364241631101, guid: 6b63070b5a692dc4389c591157da475d,
+        type: 3}
     - refId: 274
       type: MapMagic.Nodes.PositioningSettings, MapMagic, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
