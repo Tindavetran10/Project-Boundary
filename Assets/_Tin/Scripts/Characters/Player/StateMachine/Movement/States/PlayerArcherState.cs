@@ -4,7 +4,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 {
     public class PlayerArcherState : IState
     {
-        private readonly PlayerArcherStateMachine _archerStateMachine;
+        private readonly PlayerArcherStateMachine archerStateMachine;
         private Vector2 MovementInput { get; set; }
         private const float BaseSpeed = 5f;
         private const float SpeedModifier = 1f;
@@ -14,8 +14,19 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         protected Vector3 dampedTargetRotationCurrentVelocity;
         protected Vector3 dampedTargetRotationPassedTime;
 
-        protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine) => 
-            _archerStateMachine = archerStateMachine;
+        protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine)
+        {
+            this.archerStateMachine = archerStateMachine;
+            InitializeData();
+        }
+
+        private void InitializeData()
+        {
+            currentTargetRotation = Vector3.zero;
+            timeToReachTargetRotation.y = 0.14f;
+            dampedTargetRotationCurrentVelocity = Vector3.zero;
+            dampedTargetRotationPassedTime = Vector3.zero;
+        }
 
         #region IState Methods
         public virtual void Enter() => Debug.Log("PlayerArcherState Enter: " + GetType().Name);
@@ -32,7 +43,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         #region Main Methods
         private void ReadMovementInput() => 
-            MovementInput = _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.ReadValue<Vector2>();
+            MovementInput = archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.ReadValue<Vector2>();
 
         private void AddForceToPlayer() //Move
         {
@@ -42,9 +53,9 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             var movementDirection = GetMovementDirection();
             var movementSpeed = GetMovementSpeed();
             
-            Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
+            var currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
             
-            _archerStateMachine.PlayerArcher.Rigidbody.AddForce(
+            archerStateMachine.PlayerArcher.Rigidbody.AddForce(
                 movementDirection * (5F * movementSpeed) - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
         }
 
@@ -53,6 +64,8 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             var directionAngle = GetDirectionAngle(direction);
 
             directionAngle = AddCameraToRotationAngle(directionAngle);
+            
+            RotateTowardsTargetRotation();
 
             return directionAngle;
         }
@@ -68,7 +81,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private float AddCameraToRotationAngle(float angle)
         {
-            angle += _archerStateMachine.PlayerArcher.MainCameraTransform.eulerAngles.y;
+            angle += archerStateMachine.PlayerArcher.MainCameraTransform.eulerAngles.y;
 
             if(angle > 360f)
                 angle -= 360f;
@@ -79,10 +92,22 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         #region Reusable Methods
         private Vector3 GetPlayerHorizontalVelocity()
         {
-            var playerHorizontalVelocity = _archerStateMachine.PlayerArcher.Rigidbody.velocity;
+            var playerHorizontalVelocity = archerStateMachine.PlayerArcher.Rigidbody.velocity;
             playerHorizontalVelocity.y = 0f;
 
             return playerHorizontalVelocity;
+        }
+        
+        private void RotateTowardsTargetRotation()
+        {
+            float currentYAngle = archerStateMachine.PlayerArcher.Rigidbody.rotation.eulerAngles.y;
+            
+            if (currentYAngle == currentTargetRotation.y)
+                return;
+            
+            float smoothYAngle = Mathf.SmoothDampAngle(currentYAngle, currentTargetRotation.y, 
+                ref dampedTargetRotationCurrentVelocity.y, timeToReachTargetRotation.y);
+            
         }
         private Vector3 GetMovementDirection() => new(MovementInput.x, 0f, MovementInput.y);
         private static float GetMovementSpeed() => BaseSpeed * SpeedModifier;
