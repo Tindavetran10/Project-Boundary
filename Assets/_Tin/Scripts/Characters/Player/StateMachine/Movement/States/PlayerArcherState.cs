@@ -102,7 +102,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         {
             float currentYAngle = archerStateMachine.PlayerArcher.Rigidbody.rotation.eulerAngles.y;
             
-            if (currentYAngle == currentTargetRotation.y)
+            if (Mathf.Approximately(currentYAngle, currentTargetRotation.y))
                 return;
             
             float smoothYAngle = Mathf.SmoothDampAngle(currentYAngle, currentTargetRotation.y, 
